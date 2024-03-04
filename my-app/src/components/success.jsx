@@ -3,7 +3,7 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { Cancel } from '@mui/icons-material';
 function Success() {
   return (
-    <div style={{position:"absolute", width:"30%", height:"fit-content" ,backgroundColor:"white" , zIndex:"2", paddingBottom:"20px"}}>
+    <div style={{position:"absolute",top:"0%", width:"100%", height:"fit-content" ,backgroundColor:"white" , zIndex:"2", paddingBottom:"20px"}}>
          <div style={{position:"absolute", right:"10px",top:"10px"}}> <Cancel></Cancel></div>
         
          <div>

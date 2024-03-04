@@ -29,7 +29,7 @@ export default function Fourthstep({flag}) {
            
         </div>
        </div>
-       {flag? <Success></Success>:""}
+       
       
     </form>
 

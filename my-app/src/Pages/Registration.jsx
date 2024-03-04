@@ -3,6 +3,7 @@ import  First from "../components/firststep";
 import  Second from  "../components/secondstep"
 import  Third from "../components/thirdstep";
 import Fourth  from "../components/fourthstep";
+import Fifth from '../components/fifthstep';
 import { useState } from "react";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { red } from "@mui/material/colors";
@@ -28,7 +29,7 @@ function Registration() {
      return <Fourth flag={disable}></Fourth>
   }
   case 5:{
-   return <First></First>
+   return <Fifth flag={disable}></Fifth>
 }
    
 default:{
@@ -81,6 +82,9 @@ default:{
          <Step>
            <StepLabel></StepLabel>
          </Step>
+         <Step>
+            <StepLabel></StepLabel>
+         </Step>
        </Stepper>
       
          <div style={{backgroundColor:"#989898", height:"fit-content", padding:"0px 7px 1px 7px", color:"white", borderRadius:"8px", display:"flex", alignItems:"center", justifyContent:"center"}}><div>save as draft</div></div>
@@ -90,9 +94,9 @@ default:{
      </div>
     </div>
     
-    <div style={{cursor:"pointer",position:"absolute", top:"90%",right:"9%", display:"flex", justifyContent:"flex-end", gap:"30px"}}>
+    <div style={{cursor:"pointer",position:"absolute", top:"96%",right:"9%", display:"flex", justifyContent:"flex-end", gap:"30px"}}>
        <div  onClick={()=>{counter!==1?setCounter(counter-1):setCounter(1)}} style={{cursor:"pointer",color:"#767676",backgroundColor:"white",border:"#CACACA solid 1px", padding:"0px 25px 1px 25px",fontSize:"16px"}}>{counter===1?"Close":"Back"}</div>
-       <div style={{backgroundColor:"#357EBD", color:"white", padding:"0px 25px 1px 25px", fontSize:"16px"}} onClick={()=>{  counter!==4 ? setCounter(counter+1) : setdisable(true)}}>{counter===4?"finish":"Next"}</div>
+       <div style={{backgroundColor:"#357EBD", color:"white", padding:"0px 25px 1px 25px", fontSize:"16px"}} onClick={()=>{  counter!==5 ? setCounter(counter+1) : setdisable(true)}}>{counter===4?"Save": counter!==5?"Next":"finish"}</div>
       </div>
      
      
